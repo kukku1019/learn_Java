@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to
+    <%= title %>
+  </p>
+  <form action="/input" method="post">
+    <input type="submit" value="POST遷移" />
+  </form>
+<BR />
+<!--  <form action="/input" method="get">
+    <input type="text" name="text" />
+    <br />
+    <input type="submit" value="get送信" />
+  </form>
+-->
+  <form action="/input" method="post">
+    <input type="text" name="text" />
+    <br />
+    <input type="submit" value="post送信" />
+  </form>
+
+
+</body>
+
+</html>
+<!--
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    <p>
+      POST
+    </p>
+  </title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <p>
+    Welcom to node.js and MongoDB
+  </p>
+  <form action="/input" method="get">
+    <input type="text" name="text" />
+    <br />
+    <input type="submit" value="get送信" />
+  </form>
+
+  <form action="/input" method="post">
+    <input type="text" name="text" />
+    <br />
+    <input type="submit" value="post送信" />
+  </form>
+
+  <form action="/input" method="get">
+    <input type="submit" value="遷移" />
+  </form>
+</body>
+
+
+
+</html>
+
+-->
