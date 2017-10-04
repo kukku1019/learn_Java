@@ -34,7 +34,7 @@ n = neuralNetwork(input_nodes,hidden_nodes,output_nodes, learning_rate)
 
 # load the mnist training data CSV file into a list
 #csvデータを読み込む
-training_data_file = open("C:\\Users\\dev01\\mnist_dataset\\mnist_train_100.csv", 'r')
+training_data_file = open(".//mnist_dataset//mnist_train_100.csv", 'r')
 #行ごとにメモリに取り込む
 training_data_list = training_data_file.readlines()
 #ファイルを閉じる
@@ -69,7 +69,7 @@ for e in range(epochs):
     pass
 
 # load the mnist test data CSV file into a list
-test_data_file = open("C:\\Users\\dev01\\mnist_dataset\\mnist_test_10.csv", 'r')
+test_data_file = open(".//mnist_dataset//mnist_test_10.csv", 'r')
 test_data_list = test_data_file.readlines()
 test_data_file.close()
 
@@ -94,7 +94,7 @@ for record in test_data_list:
     image_array = numpy.asfarray(all_values[1:]).reshape((28,28))
     matplotlib.pyplot.imshow(image_array, cmap='Greys',interpolation='None')
     inputs = (numpy.asfarray(all_values[1:]) / 255.0 * 0.99) + 0.01
-    
+
 
 
     # query the network
@@ -119,5 +119,6 @@ s=scorecard_array.sum() / scorecard_array.size
 print ("performance(評価値) = ", s)
 
 
-#image_array = numpy.asfarray(all_values[1:]).reshape((28,28))
-#matplotlib.pyplot.imshow(image_array, cmap='Greys',interpolation='None')
+image_array = numpy.asfarray(all_values[1:]).reshape((28,28))
+matplotlib.pyplot.imshow(image_array, cmap='Greys',interpolation='None')
+matplotlib.pyplot.show()
